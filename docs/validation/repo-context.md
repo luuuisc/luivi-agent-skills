@@ -1,6 +1,6 @@
 # repo-context Validation Record
 
-**Status:** Maintainer-reported smoke test; incomplete record
+**Status:** Usable for initial work based on maintainer-reported successful real-world use; incomplete evaluation record
 **Date recorded:** 2026-09-29
 
 ## Trial
@@ -9,6 +9,7 @@
 - **Task focus:** Understand deployment readiness before planning or editing.
 - **Skill:** `skills/repo-context/SKILL.md`, supplied to the other project chat by absolute path.
 - **User report:** The maintainer said the skill worked and the result was useful.
+- **Usability decision:** The maintainer confirms that `repo-context` worked; proceed to the next skill while retaining the evidence limitations below.
 
 ## Evidence limitations
 

@@ -104,14 +104,10 @@ For cross-agent work, use the portable Agent Skills format for shared workflow c
 
 ## Current focus
 
-The first skill is:
+The active skill is:
 
-skills/repo-context/SKILL.md
+skills/implementation-plan/SKILL.md
 
-Goal:
+It consumes a task and a `Repository Context Map` to produce a small, evidence-based implementation plan before code changes.
 
-Before a coding agent plans or edits code, it should understand the repository architecture, stack, commands, conventions, tests, relevant files and risks.
-
-Expected output:
-
-Repository Context Map
+The previous skill, `repo-context`, is usable for initial work based on a successful maintainer-reported real-world trial. Preserve its evidence limitation in `docs/validation/repo-context.md`; do not present it as independently evaluated.

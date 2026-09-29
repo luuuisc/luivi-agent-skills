@@ -10,7 +10,7 @@ The project uses a spec-driven workflow: define the problem and acceptance crite
 
 ## Current status
 
-The first workflow, [`repo-context`](skills/repo-context/SKILL.md), creates a concise Repository Context Map before implementation. The maintainer reports that it worked in a separate CRM repository task; the result was not saved, so a repeatable evaluation is still needed before calling the skill production-ready.
+[`repo-context`](skills/repo-context/SKILL.md) is usable for initial work: the maintainer reports that it produced a useful Repository Context Map in a real CRM repository task. The output was not saved, so a repeatable evaluation remains future work. `implementation-plan` is now the active skill under development.
 
 ## Roadmap
 
@@ -26,6 +26,7 @@ The first workflow, [`repo-context`](skills/repo-context/SKILL.md), creates a co
 AGENTS.md                  Repository-specific contributor instructions
 skills/                    Canonical reusable skill packages
 docs/PROJECT_SPEC.md       Product scope and architecture decisions
+docs/specs/                Per-skill problem statements and acceptance criteria
 docs/validation/           Real-world validation notes
 CONTRIBUTING.md            How to propose and validate changes
 LICENSE                    MIT License

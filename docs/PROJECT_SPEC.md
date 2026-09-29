@@ -35,7 +35,7 @@ Build and validate these workflows in order:
 4. `code-review`
 5. `pre-merge`
 
-Do not start a later workflow until the current one meets its acceptance criteria and has recorded validation evidence.
+Do not start a later workflow until the current one meets its acceptance criteria and has recorded validation evidence. A maintainer-reported real-world success can establish initial usability; distinguish that from a reproducible or independent evaluation.
 
 ## Out of scope for V0
 
@@ -122,10 +122,10 @@ The repository is ready for its first public release when:
 
 ## Current evidence and open decisions
 
-- `repo-context` has a maintainer-reported successful trial in a separate CRM repository. The generated map and exact run record are not stored in this repository; this is a smoke-test signal, not yet a reproducible evaluation.
+- `repo-context` is usable for initial work based on a successful maintainer-reported trial in a separate CRM repository. The generated map and exact prompt were not saved, so the trial is not reproducible or independently evaluated.
 - The maintainer selected the MIT License, and the repository now includes the license text and contribution expectations.
 - A public evaluation format, installation workflow, and initial host verification matrix remain to be decided based on actual usage.
 
 ## Next slice
 
-The initial public push includes the selected MIT license and a concise contribution guide. Next, run a repeatable `repo-context` trial with a saved, privacy-reviewed output before declaring the skill usable or starting `implementation-plan`.
+Develop and validate `implementation-plan` against a real task. In parallel, review the maintainer's starred repositories for techniques worth testing; treat stars as a reading queue, not an endorsement or dependency list. Revisit `repo-context` with a saved, privacy-reviewed output when setting up measurable evals.
