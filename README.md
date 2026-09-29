@@ -8,17 +8,54 @@ This repository is being built in the open as a practical engineering system for
 
 The project uses a spec-driven workflow: define the problem and acceptance criteria, implement the smallest useful workflow, try it on real engineering work, record what happened, then improve it. Skills are designed for progressive disclosure: short discovery metadata, focused instructions when relevant, and supporting material only when needed. The goal is useful signal and less repeated discovery, not minimizing tokens at the expense of quality.
 
+The differentiation we are testing is not a larger catalog: each workflow should earn its place with real-task evidence, a compact artifact that can be handed to another workflow or agent, and explicit quality boundaries. Context efficiency should show up as less repeated discovery and smaller task-relevant handoffs without worse engineering outcomes.
+
 ## Current status
 
-[`repo-context`](skills/repo-context/SKILL.md) is usable for initial work: the maintainer reports that it produced a useful Repository Context Map in a real CRM repository task. The output was not saved, so a repeatable evaluation remains future work. `implementation-plan` is now the active skill under development.
+[`repo-context`](skills/repo-context/SKILL.md) and [`implementation-plan`](skills/implementation-plan/SKILL.md) are usable for initial work based on maintainer-reported trials; neither has a complete, independently reviewed evaluation record. [`spec-driven-development`](skills/spec-driven-development/SKILL.md) is now the active skill under development.
+
+## Install
+
+The skills are organized as `skills/<skill-name>/SKILL.md` and are intended to be installable with the open-source [`skills` CLI](https://github.com/vercel-labs/skills). No repository-specific installer is required.
+
+List skills available in this repository:
+
+```sh
+npx skills add luuuisc/luivi-agent-skills --list
+```
+
+Install one skill into the current project for Codex:
+
+```sh
+npx skills add luuuisc/luivi-agent-skills --skill repo-context --agent codex --copy --yes
+```
+
+Install the two skills currently marked usable for Codex globally, so they are available across projects:
+
+```sh
+npx skills add luuuisc/luivi-agent-skills --skill repo-context --skill implementation-plan --agent codex --global --copy --yes
+```
+
+Install that skill globally for Claude Code instead:
+
+```sh
+npx skills add luuuisc/luivi-agent-skills --skill repo-context --agent claude-code --global --copy --yes
+```
+
+Replace `repo-context` with another skill name and `codex` or `claude-code` with a supported agent identifier. Project installation is the default; `--global` targets the user's agent skill directory. The CLI may support additional agents and install methods; consult its [current documentation](https://www.skills.sh/docs/cli). Installing a skill makes it discoverable, but does not imply that the skill has passed this repository's real-work validation.
+
+These commands are documented against the CLI interface but have not yet been successfully exercised from a clean environment. Cross-agent discovery and behavior are verified separately and are not implied by installability.
+
+After installation, describe the outcome in normal language; you should not need to provide a file path or skill name when the agent supports automatic skill discovery. The agent uses each skill's name and short `description` to decide which instructions are relevant. Keep descriptions specific and non-overlapping; activation behavior can still differ across agents. For Codex, see the [official OpenAI skill documentation](https://developers.openai.com/api/docs/guides/tools-skills).
 
 ## Roadmap
 
 1. `repo-context` — understand a repository before changing it.
-2. `implementation-plan` — turn repository context and a task into an executable plan.
-3. `test-strategy` — define and run an appropriate verification strategy.
-4. `code-review` — find actionable correctness and regression risks.
-5. `pre-merge` — confirm a change is ready to merge.
+2. `spec-driven-development` — turn a feature request into a testable behavior specification.
+3. `implementation-plan` — turn repository context and a specification/task into an executable plan.
+4. `test-strategy` — define and run an appropriate verification strategy.
+5. `code-review` — find actionable correctness and regression risks.
+6. `pre-merge` — confirm a change is ready to merge.
 
 ## Repository map
 
@@ -32,7 +69,7 @@ CONTRIBUTING.md            How to propose and validate changes
 LICENSE                    MIT License
 ```
 
-See [`docs/PROJECT_SPEC.md`](docs/PROJECT_SPEC.md) for the current product spec and the proposed cross-agent architecture. This project does not yet include an installer or claim full behavior parity across agent tools.
+See [`docs/PROJECT_SPEC.md`](docs/PROJECT_SPEC.md) for the current product spec, distribution decision, and proposed cross-agent architecture. This project does not claim full behavior parity across agent tools.
 
 ## Contributing
 

@@ -80,10 +80,11 @@ Do not add optional directories unless needed.
 Build these skills in this order:
 
 1. repo-context
-2. implementation-plan
-3. test-strategy
-4. code-review
-5. pre-merge
+2. spec-driven-development
+3. implementation-plan
+4. test-strategy
+5. code-review
+6. pre-merge
 
 Do not start the next skill until the previous one is usable.
 
@@ -106,8 +107,8 @@ For cross-agent work, use the portable Agent Skills format for shared workflow c
 
 The active skill is:
 
-skills/implementation-plan/SKILL.md
+skills/spec-driven-development/SKILL.md
 
-It consumes a task and a `Repository Context Map` to produce a small, evidence-based implementation plan before code changes.
+It converts a feature request into a concise, reviewable specification before implementation planning. It should hand the specification to `implementation-plan` without repeating repository discovery.
 
-The previous skill, `repo-context`, is usable for initial work based on a successful maintainer-reported real-world trial. Preserve its evidence limitation in `docs/validation/repo-context.md`; do not present it as independently evaluated.
+`repo-context` and `implementation-plan` are usable for initial work based on maintainer-reported real-world trials. Preserve each evidence limitation in `docs/validation/`; do not present either as independently evaluated.

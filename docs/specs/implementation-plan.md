@@ -1,6 +1,6 @@
 # Skill Spec: implementation-plan
 
-**Status:** Draft, V0
+**Status:** Usable for initial work based on maintainer-reported success; incomplete evaluation record
 
 ## Problem
 
@@ -48,4 +48,4 @@ A concise `Implementation Plan` with:
 
 ## Validation approach
 
-Use a real non-trivial task in Dulio or the CRM project. Save the request, the Repository Context Map supplied to the skill (after removing private information), and the resulting plan. Ask whether the plan identifies the right boundaries, tests, risks, and decisions without repeating context or inventing work. Record omissions and unnecessary plan content before revising the skill.
+See [`../validation/implementation-plan.md`](../validation/implementation-plan.md) for the current maintainer-reported result and its evidence limitations. Repeat a real non-trivial task in Dulio or the CRM project with a privacy-reviewed request, context map, and resulting plan before claiming independent or repeatable validation.
