@@ -12,7 +12,7 @@ The differentiation we are testing is not a larger catalog: each workflow should
 
 ## Current status
 
-[`repo-context`](skills/repo-context/SKILL.md) and [`implementation-plan`](skills/implementation-plan/SKILL.md) are usable for initial work based on maintainer-reported trials; neither has a complete, independently reviewed evaluation record. [`spec-driven-development`](skills/spec-driven-development/SKILL.md) is now the active skill under development.
+[`repo-context`](skills/repo-context/SKILL.md) and [`implementation-plan`](skills/implementation-plan/SKILL.md) are usable for initial work based on maintainer-reported trials; neither has a complete, independently reviewed evaluation record. The remaining skills are drafts and should be validated against real tasks before being described as usable.
 
 ## Install
 
@@ -30,10 +30,10 @@ Install one skill into the current project for Codex:
 npx skills add luuuisc/luivi-agent-skills --skill repo-context --agent codex --copy --yes
 ```
 
-Install the two skills currently marked usable for Codex globally, so they are available across projects:
+Install every skill in this repository into the current project for Codex, including drafts you can try and evaluate:
 
 ```sh
-npx skills add luuuisc/luivi-agent-skills --skill repo-context --skill implementation-plan --agent codex --global --copy --yes
+npx skills add luuuisc/luivi-agent-skills --skill '*' --agent codex --copy --yes
 ```
 
 Install that skill globally for Claude Code instead:
@@ -56,6 +56,8 @@ After installation, describe the outcome in normal language; you should not need
 4. `test-strategy` — define and run an appropriate verification strategy.
 5. `code-review` — find actionable correctness and regression risks.
 6. `pre-merge` — confirm a change is ready to merge.
+
+Additional skills in the draft catalog: `architecture-decision`, `branch-start`, `commit-craft`, `change-documentation`, `changelog-maintenance`, `pr-readiness`, and `data-change-safety`. They are optional task-specific workflows, not steps to load on every change.
 
 ## Repository map
 

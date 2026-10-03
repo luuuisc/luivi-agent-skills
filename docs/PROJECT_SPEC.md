@@ -36,7 +36,9 @@ Build and validate these workflows in order:
 5. `code-review`
 6. `pre-merge`
 
-Do not start a later workflow until the current one meets its acceptance criteria and has recorded validation evidence. A maintainer-reported real-world success can establish initial usability; distinguish that from a reproducible or independent evaluation.
+The core workflows exchange compact artifacts in this order. Drafts across the catalog may be prepared together and installed for trials, but each skill's maturity is independent: do not call it usable until its own acceptance criteria and validation record are satisfied. A maintainer-reported real-world success can establish initial usability; distinguish that from a reproducible or independent evaluation.
+
+Additional task-specific skills: `architecture-decision`, `branch-start`, `commit-craft`, `change-documentation`, `changelog-maintenance`, `pr-readiness`, and `data-change-safety`. These are selected only when their narrow triggers apply, not loaded as a mandatory chain.
 
 ## Out of scope for V0
 
@@ -67,6 +69,7 @@ Do not start a later workflow until the current one meets its acceptance criteri
 - Skills describe reusable workflows loaded for a task.
 - Tool-specific instruction files and rules may adapt the same intent to each host, but are not automatically interchangeable.
 - Agent orchestration is a separate layer. Skills can define clear task boundaries and handoff artifacts, but a `SKILL.md` alone does not spawn agents or manage their context windows.
+- Engineering commit messages and PR titles/descriptions are English by default in this repository and in the commit/PR skills. Customer-facing changelogs, UI, and documentation use the consuming project's explicit client/audience language policy.
 
 ### Skill discovery and routing
 

@@ -30,6 +30,7 @@ Dulio is the primary real-world proving ground for these skills.
 9. Evals should be added when quality can be measured.
 10. Never optimize for quantity of skills. Optimize for usefulness.
 11. Optimize context for useful signal: keep discovery metadata small, load detailed workflow guidance only when relevant, and avoid repeating repository facts already captured in project instructions or prior artifacts.
+12. Write this repository's commit messages and PR titles/descriptions in English. Customer-facing content must follow the consuming project's explicit client/audience language policy; do not infer it from the maintainer's language.
 
 ## Repository architecture
 
@@ -75,9 +76,9 @@ A skill may optionally include:
 
 Do not add optional directories unless needed.
 
-## Current V0
+## Skill catalog and validation
 
-Build these skills in this order:
+The core V0 workflow is:
 
 1. repo-context
 2. spec-driven-development
@@ -86,7 +87,9 @@ Build these skills in this order:
 5. code-review
 6. pre-merge
 
-Do not start the next skill until the previous one is usable.
+The additional catalog is drafted alongside the core workflow so it can be installed and tried incrementally: architecture-decision, branch-start, commit-craft, change-documentation, changelog-maintenance, pr-readiness, and data-change-safety.
+
+Drafting the catalog does not make a skill usable. Validate one skill at a time against a real or realistic task, record evidence and failures, and mark it usable only after its own acceptance criteria are met. Preserve the core workflow's handoff order when a task uses multiple skills. Test optional skills when an appropriate real task arises; do not claim untested cross-agent behavior.
 
 ## Development workflow
 
@@ -105,10 +108,10 @@ For cross-agent work, use the portable Agent Skills format for shared workflow c
 
 ## Current focus
 
-The active skill is:
+The current validation focus is:
 
 skills/spec-driven-development/SKILL.md
 
 It converts a feature request into a concise, reviewable specification before implementation planning. It should hand the specification to `implementation-plan` without repeating repository discovery.
 
-`repo-context` and `implementation-plan` are usable for initial work based on maintainer-reported real-world trials. Preserve each evidence limitation in `docs/validation/`; do not present either as independently evaluated.
+`repo-context` and `implementation-plan` are usable for initial work based on maintainer-reported real-world trials. Preserve each evidence limitation in `docs/validation/`; do not present either as independently evaluated. Other catalog entries remain drafts until validated.
